@@ -1,3 +1,6 @@
-FROM flant/shell-operator:latest
-#ADD pods-hook.sh /hooks
-#RUN chmod 777 /hooks/pods-hook.sh
+FROM debian:bullseye-slim
+#ARG DISTRIBUTION
+#ADD build/ultimator_*$DISTRIBUTION.deb /
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt update && apt install -y ./ultimator_*.deb && rm ./ultimator_*.deb
+ENTRYPOINT ["/bin/bash"]
