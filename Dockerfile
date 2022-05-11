@@ -3,8 +3,6 @@ FROM debian:bullseye-slim
 #ADD build/ultimator_*$DISTRIBUTION.deb /
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt update && apt install -y ./ultimator_*.deb && rm ./ultimator_*.deb
-
 RUN apt-get update && apt-get install -y \
     nginx \
     automake \
