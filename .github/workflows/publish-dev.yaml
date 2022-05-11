@@ -10,7 +10,7 @@ on:
 env:
   QEMU_PLATFORMS: arm64,arm
   BUILDX_PLATFORMS: "linux/amd64,linux/arm64,linux/arm/v7"
-  IMAGE_REPO: flant/shell-operator-dev
+  IMAGE_REPO: shaposhnikoff/shell-operator-dev
 
 jobs:
   build_dev_image:
