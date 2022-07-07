@@ -51,12 +51,12 @@ jobs:
         with:
           version: latest
 
-      - name: Login to GitLab
-        uses: docker/login-action@v2
-        with:
-          registry: registry.gitlab.com
-          username: ${{ secrets.GITLAB_USERNAME }}
-          password: ${{ secrets.GITLAB_PASSWORD }}
+      #- name: Login to GitLab
+      #  uses: docker/login-action@v2
+      #  with:
+      #    registry: registry.gitlab.com
+      #    username: ${{ secrets.GITLAB_USERNAME }}
+      #    password: ${{ secrets.GITLAB_PASSWORD }}
 
       - name: Login to DockerHub
         uses: docker/login-action@v1.10.0
