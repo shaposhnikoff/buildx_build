@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "shaposhnikoff/docker-test"
+    registry = "${registry}"
     registryCredential = "ed464724-bd9c-4a6e-834f-164d7880ab77"
     dockerImage = ''
   }
