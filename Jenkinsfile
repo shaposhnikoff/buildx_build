@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git url: 'https://github.com/shaposhnikoff/buildx_build.git',
+        git url: "${git_url}",
             branch: "${GIT_BRANCH.split("/")[1]}"
       }
     }
